@@ -1,0 +1,43 @@
+# ─────────────────────────────
+# Dependencies
+# ─────────────────────────────
+node_modules/
+
+# ─────────────────────────────
+# Environment variables (secrets)
+# .env.example ignore হবে না — ওটা commit হবে
+# ─────────────────────────────
+.env
+.env.local
+.env.*.local
+
+# ─────────────────────────────
+# Build output
+# ─────────────────────────────
+dist/
+build/
+
+# ─────────────────────────────
+# Logs
+# ─────────────────────────────
+*.log
+npm-debug.log*
+
+# ─────────────────────────────
+# Test coverage
+# ─────────────────────────────
+coverage/
+
+# ─────────────────────────────
+# OS generated files
+# ─────────────────────────────
+.DS_Store
+Thumbs.db
+
+# ─────────────────────────────
+# Editor settings (personal)
+# ─────────────────────────────
+.vscode/*
+!.vscode/extensions.json
+.idea/
+.dist
