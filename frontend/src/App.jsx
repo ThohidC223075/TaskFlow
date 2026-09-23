@@ -1,10 +1,18 @@
+import { Routes, Route } from 'react-router';
+import MainLayout from './layouts/MainLayout';
+import DashboardPage from './pages/DashboardPage';
+import TasksPage from './pages/TasksPage';
+import NotFoundPage from './pages/NotFoundPage';
+
 function App() {
   return (
-    <div className="flex min-h-screen items-center justify-center">
-      <h1 className="rounded-xl bg-indigo-600 px-6 py-4 text-3xl font-bold text-white shadow-lg">
-        TaskFlow + Tailwind ✅
-      </h1>
-    </div>
+    <Routes>
+      <Route path="/" element={<MainLayout />}>
+        <Route index element={<DashboardPage />} />
+        <Route path="tasks" element={<TasksPage />} />
+        <Route path="*" element={<NotFoundPage />} />
+      </Route>
+    </Routes>
   );
 }
 
